@@ -1,0 +1,22 @@
+
+version: 2
+
+models:
+    - name: customer_master
+      description: "Customer list with all relevant information"
+      columns:
+          - name: customer_id
+            description: "The customer id (address id)"
+            tests:
+                - unique
+                - not_null
+          - name: customer_name
+            description: "The customer's name"
+
+    - name: src_terms
+      description: "Terms ID"
+      columns:
+          - name: terms_id
+            tests:
+                - unique
+                - not_null
